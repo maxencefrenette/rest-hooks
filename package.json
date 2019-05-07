@@ -137,6 +137,9 @@
   "peerDependenciesMeta": {
     "@types/react": {
       "optional": true
+    },
+    "scheduler": {
+      "optional": true
     }
   }
 }
