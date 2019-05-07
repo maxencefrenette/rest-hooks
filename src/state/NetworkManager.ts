@@ -1,4 +1,6 @@
 import { memoize } from 'lodash';
+// eslint-disable-next-line @typescript-eslint/camelcase
+import { unstable_scheduleCallback } from 'scheduler';
 import { FetchAction, ReceiveAction, MiddlewareAPI } from '../types';
 
 export const RIC: (cb: (...args: any[]) => void, options: any) => void =
@@ -125,9 +127,8 @@ export default class NetworkManager {
         this.clear(action.meta.url);
       }
     };
-    // TODO: this should call after the reducer has been updated
-    // in all concurrent fibers
-    RIC(completePromise, { timeout: 1000 });
+    // eslint-disable-next-line @typescript-eslint/camelcase
+    unstable_scheduleCallback(completePromise, null);
   }
 
   /** Attaches NetworkManager to store
