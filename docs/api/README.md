@@ -13,7 +13,7 @@ title: API Reference
   - [useRetrieve](useRetrieve.md)
   - [useInvalidator](useInvalidator.md)
 - Components:
-  - [RestProvider](RestProvider.md)
+  - [CacheProvider](CacheProvider.md)
   - [ExternalCacheProvider](ExternalCacheProvider.md)
   - [NetworkErrorBoundary](NetworkErrorBoundary.md)
 - [Manager](Manager.md)s
